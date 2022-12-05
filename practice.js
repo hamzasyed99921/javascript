@@ -22,6 +22,28 @@
 // newFunc()
 // console.log(myName);
 
+// function myFun() {
+//     var userName = "hamza"
+// }
+
+// console.log(userName);
+// var tester = "hey hi";
+    
+// function newFunction() {
+//     var hello = "hello";
+// }
+// console.log(hello); // error: hello is not defined
+
+// let greeting = "say Hi";
+// let times = 4;
+
+// if (times > 3) {
+//      let hello = "say Hello instead";
+//      console.log(hello);// "say Hello instead"
+//  }
+// console.log(hello) // hello is not defined
+
+
 
 // var times = 4;
 
@@ -40,6 +62,35 @@
 // console.log(myAge);
 
 // Synchronous and asynchronous
+// // 6️:   Synchronous JavaScript Prog 
+
+// const fun2 = () => {
+//   console.log(`Function 2️ is called`);
+// }
+
+// const fun1 = () => {
+//   console.log(`Function 1 is called`);
+//   fun2();
+//   console.log(`Function 1 is called Again`);
+// }
+
+// fun1();
+
+// Asynchronous JavaScript Prog 
+
+// const fun2 = () => {
+//     setTimeout(()=> {
+//         console.log(`Function 2️  is called`);
+//     }, 2000);
+//   }
+  
+//   const fun1 = () => {
+//     console.log(`Function 1 is called`);
+//     fun2();
+//     console.log(`Function 1 is called Again `);
+//   }
+  
+//   fun1();
 
 // Synchronous
 
@@ -90,6 +141,8 @@
 //     })
 
 
+//  Callback hell
+
 // let production = () =>{
 
 //     setTimeout(() => {
@@ -111,3 +164,94 @@
 //   };
 
 //   production()
+
+// Promises
+
+
+// let order = () => {
+//     return new  Promise((resolve,reject) => {
+//         setTimeout(() => {
+//             console.log("Order Placed");
+//             resolve();
+//         },1000)
+//     })
+// }
+// let production = () => {
+//     return new  Promise((resolve,reject) => {
+//         setTimeout(() => {
+//             console.log("production has started");
+//             resolve();
+//         },3000)
+//     })
+// }
+// let machine = () => {
+//     return new  Promise((resolve,reject) => {
+//         setTimeout(() => {
+//             console.log("machine has started");
+//             resolve();
+//         },4000)
+//     })
+// }
+// let serve = () => {
+//     return new  Promise((resolve,reject) => {
+//         setTimeout(() => {
+//             console.log("ICe Cream Serve");
+//             resolve();
+//         },2000)
+//     })
+// }
+
+
+// order().then(production).then(machine).then(serve).catch((error) => {
+//     console.log(error);
+// });
+
+
+// Async Await
+
+// let order = () => {
+//     return new  Promise((resolve,reject) => {
+//         setTimeout(() => {
+//             console.log("Order Placed");
+//             resolve();
+//         },1000)
+//     })
+// }
+// let production = () => {
+//     return new  Promise((resolve,reject) => {
+//         setTimeout(() => {
+//             console.log("production has started");
+//             resolve();
+//         },3000)
+//     })
+// }
+// let machine = () => {
+//     return new  Promise((resolve,reject) => {
+//         setTimeout(() => {
+//             console.log("machine has started");
+//             resolve();
+//         },4000)
+//     })
+// }
+// let serve = () => {
+//     return new  Promise((resolve,reject) => {
+//         setTimeout(() => {
+//             // console.log("ICe Cream Serve");
+//             reject('ice cream not serve');
+//         },2000)
+//     })
+// }
+
+// const process = async() => {
+//     try{
+//         await order();
+//     await production();
+//     await machine();
+//     await order();
+//     await serve();
+//     } catch(error) {
+//         console.log(error);
+//     }
+// }
+
+// process()
